@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('static/house.jpg') fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background-position: center;
+            height: 100vh;
+
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.79);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            width: 420px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .heading {
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #333;
+            letter-spacing: 1.5px;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #007bff, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 2vw;
+        }
+
+        button {
+            background: linear-gradient(135deg, #007bff, #00d4ff);
+            border: none;
+            color: white;
+            padding: 12px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            outline: none;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #0056b3, #0094ff);
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="heading">
+            Predicted Price: <span style="color:white;">{{ price }}</span>
+        </div>
+        <a href="{{ url_for('home') }}"><button>Predict Another</button></a>
+    </div>
+</body>
+
+</html>

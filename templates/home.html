@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('static/house.jpg') fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background-position: center;
+        }
+
+        /* .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        } */
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            width: 420px;
+            text-align: center;
+            position: relative;
+            animation: fadeIn 1s ease-in-out;
+            background: rgba(0, 0, 0, 0.79);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        label {
+            font-weight: bold;
+            color: white;
+            text-align: left;
+        }
+
+        input,
+        select,
+        button {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        input:focus,
+        select:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+            transform: scale(1.02);
+        }
+
+        button {
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #0056b3, #003d80);
+            transform: scale(1.08);
+        }
+
+        .heading {
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #333;
+            letter-spacing: 1.5px;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #007bff, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 2vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="heading">House Price Prection</div>
+        <form action="" method="POST">
+            <label for="area">Area:</label>
+            <input type="number" name="area" id="area" required>
+
+            <label for="bathroom">Bathroom:</label>
+            <input type="number" name="bathroom" id="bathroom" required>
+
+            <label for="bedroom">Bedroom:</label>
+            <input type="number" name="bedroom" id="bedroom" required>
+
+            <label for="stories">Stories:</label>
+            <input type="number" name="stories" id="stories" required>
+
+            <label for="road">Main Road:</label>
+            <select name="road" id="road">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="guest">Guest Room:</label>
+            <select name="guest" id="guest">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="basement">Basement:</label>
+            <select name="basement" id="basement">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="hotwaterheating">Hot Water Heating:</label>
+            <select name="hotwaterheating" id="hotwaterheating">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="airconditioning">Air Conditioning:</label>
+            <select name="airconditioning" id="airconditioning">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="parking">Parking:</label>
+            <input type="number" name="parking" id="parking" required>
+            
+            <label for="prefarea">Preferred Area:</label>
+            <select name="prefarea" id="prefarea">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            
+
+            <label for="furnishingstatus">Furnishing:</label>
+            <select name="furnishingstatus" id="furnishingstatus">
+                <option value="furnished">Furnished</option>
+                <option value="semi-furnished">Semi-Furnished</option>
+                <option value="unfurnished">Un-Furnished</option>
+            </select>
+
+            <button type="submit">Predict Price</button>
+        </form>
+        
+    </div>
+</body>
+
+</html>
