@@ -4,3 +4,5 @@ matplotlib
 scikit-learn
 flask
 gunicorn
+setuptools
+-e .
